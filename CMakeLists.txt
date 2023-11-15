@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0")
 
-project(cellworld_planner
+project(cellworld_utilities
         VERSION 2019.1.0
         DESCRIPTION "Cellworld Utilities Libraries"
         LANGUAGES CXX)
