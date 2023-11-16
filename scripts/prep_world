@@ -27,4 +27,3 @@ echo "creating occlusions robot"
 echo "creating paths robot"
 ../cmake-build-release/create_paths -c ${configuration} -o $occlusions -r > "$CELLWORLD_CACHE/paths/${configuration}.${occlusions}.astar.robot"
 echo "finished"
-
