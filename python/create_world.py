@@ -28,7 +28,7 @@ def key_pressed(k):
         if world_name:
             file_name = cell_group_folder + "/hexagonal." + world_name + ".occlusions"
             print("saving file ", file_name)
-            w.cells.occluded_cells().save(file_name)
+            w.cells.occluded_cells().builder().save(file_name)
     elif k.key == "q":
         exit(0)
     elif k.key == "p":
