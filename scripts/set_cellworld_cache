@@ -10,3 +10,4 @@ fi
 echo "export CELLWORLD_CACHE=${folder}/cellworld_data" >> ~/.bashrc
 
 export CELLWORLD_CACHE=${folder}/cellworld_data
+
