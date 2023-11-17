@@ -4,7 +4,7 @@ folder=$1
 
 if [ ! -d "${folder}/cellworld_data" ]; then
   cd "$folder"
-  git clone https://github.com/germanespinosa/cellworld_data -–depth 1
+  git clone https://github.com/germanespinosa/cellworld_data
 fi
 
 echo "export CELLWORLD_CACHE=${folder}/cellworld_data" >> ~/.bashrc
