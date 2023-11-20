@@ -35,6 +35,22 @@ Note: Substitute "00_00" in the command above with the desired world name.
 ### Step 6: Commit to Github
 Navigate to the cellworld_data project and commit all files to GitHub.
 
+# Deliverables
+Files added to cellworld data:
+```
+cellworld_data
+├── cell_group
+│   ├── hexagonal.00_00.occlusions
+│   ├── hexagonal.00_00.occlusions.robot
+│   ├── hexagonal.00_00.predator_destinations
+│   └── hexagonal.00_00.spawn_locations
+├── paths
+│   ├── hexagonal.00_00.astar (needed for simulation only)
+│   └── hexagonal.00_00.astar.robot
+└── graph
+    └── hexagonal.00_00.cell_visibility
+```
+
 # Project Details
 The following sections provide brief descriptions of files within the primary directories of this project.
 
@@ -59,18 +75,3 @@ The following sections provide brief descriptions of files within the primary di
 2. check_prep_world.py -> allows you to check output of (create_robot_occlusions.cpp, create_predator_destinations.cpp, and create_spawn_locations.cpp)
 
 
-# Deliverables
-Files added to cellworld data:
-```
-cellworld_data
-├── cell_group
-│   ├── hexagonal.00_00.occlusions
-│   ├── hexagonal.00_00.occlusions.robot
-│   ├── hexagonal.00_00.predator_destinations
-│   └── hexagonal.00_00.spawn_locations
-├── paths
-│   ├── hexagonal.00_00.astar (needed for simulation only)
-│   └── hexagonal.00_00.astar.robot
-└── graph
-    └── hexagonal.00_00.cell_visibility
-```
