@@ -61,7 +61,7 @@ The following sections provide brief descriptions of files within the primary di
 
 # Deliverables
 Files added to cellworld data:
-<div style="font-family: monospace; white-space: pre;">
+```
 cellworld_data
 ├── cell_group
 │   ├── hexagonal.00_00.occlusions
@@ -73,6 +73,4 @@ cellworld_data
 │   └── hexagonal.00_00.astar.robot
 └── graph
     └── hexagonal.00_00.cell_visibility
-</div>
-
-
+```
