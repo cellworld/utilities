@@ -30,7 +30,10 @@ cellworld_data
 
 
 
+1. git clone https://github.com/cellworld/utilities
+2. cd utilities/scripts (echo $CELLWORLD_CACHE)
+      1. ./build_utilities
+      2. ./create_world
+      3. ./prep_world 00_00 -f
 
-./build_utilities
-./prep_world 00_00 -f
-git clone https://github.com/germanespinosa/cellworld_data --depth 1
+
