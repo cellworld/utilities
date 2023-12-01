@@ -8,7 +8,7 @@ git clone https://github.com/cellworld/utilities
 Run the following commands to (1) navigate to scripts directory and (2) set CELLWORLD_CACHE and clone cellworld_data repository if the directory does not exist locally.
 ```bash
 cd utilities/scripts
-./set_cellworld_cache
+./set_cellworld_cache /research 
 ```
 ### Step 3: Build Project
 ```bash
