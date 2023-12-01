@@ -1,6 +1,10 @@
 #!/bin/bash
 folder=$1
 
+if [ "$folder" == "" ]; then
+  echo "Cache destination folder should not be emty (try /research)"
+  exit 1
+fi
 
 if [ ! -d "${folder}/cellworld_data" ]; then
   cd "$folder"
