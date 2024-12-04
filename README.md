@@ -5,11 +5,11 @@ Note: if you have already setup the project (meaning you have completed steps 1-
 git clone https://github.com/cellworld/utilities
 ```
 ### Step 2: Set CELLWORLD_CACHE
-Run the following commands to (1) navigate to scripts directory and (2) set CELLWORLD_CACHE and clone cellworld_data repository if the directory does not exist locally.\\
+Run the following commands to (1) navigate to scripts directory and (2) set CELLWORLD_CACHE and clone cellworld_data repository if the directory does not exist locally.  
 Note: **specified_directory** is where you would like cellworld_data git repository to be cloned.
 ```bash
 cd utilities/scripts
-./set_cellworld_cache **/specified_directory** 
+./set_cellworld_cache /specified_directory
 ```
 ### Step 3: Build Project
 ```bash
