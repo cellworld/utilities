@@ -2,7 +2,7 @@
 folder=$1
 
 if [ "$folder" == "" ]; then
-  echo "Cache destination folder should not be emty (try /research)"
+  echo "Cache destination folder should not be emtpy (try /research)"
   exit 1
 fi
 
@@ -14,4 +14,3 @@ fi
 echo "export CELLWORLD_CACHE=${folder}/cellworld_data" >> ~/.bashrc
 
 export CELLWORLD_CACHE=${folder}/cellworld_data
-
