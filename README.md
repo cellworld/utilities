@@ -7,6 +7,7 @@ git clone https://github.com/cellworld/utilities
 ### Step 2: Set CELLWORLD_CACHE
 Run the following commands to (1) navigate to scripts directory and (2) set CELLWORLD_CACHE and clone cellworld_data repository if the directory does not exist locally.  
 Note: **specified_directory** is where you would like cellworld_data git repository to be cloned.
+Note: if you get an error like this: /bin/bash^M: bad interpreter: No such file or directory, run  **dos2unix set_cellworld_cache** command
 ```bash
 cd utilities/scripts
 ./set_cellworld_cache /specified_directory
