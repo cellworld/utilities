@@ -1,16 +1,26 @@
 #!/bin/bash
 folder=$1
 
-if [ "$folder" == "" ]; then
-  echo "Cache destination folder should not be emtpy (try /research)"
+if [ ! -d "${folder}" ]; then
+  echo "Cache destination folder DNE (try /mnt/c/research)"
   exit 1
 fi
 
+
+if [ "$folder" == "" ]; then
+  ls "${folder}"
+  echo "Cache destination folder should not be empty (try /research)"
+  exit 1
+fi
+
+
 if [ ! -d "${folder}/cellworld_data" ]; then
   cd "$folder"
+  echo "cellworld_data DNE here cloning"
   git clone https://github.com/germanespinosa/cellworld_data
 fi
 
 echo "export CELLWORLD_CACHE=${folder}/cellworld_data" >> ~/.bashrc
 
 export CELLWORLD_CACHE=${folder}/cellworld_data
+echo "CELLWORLD_CACHE==$CELLWORLD_CACHE"

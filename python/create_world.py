@@ -5,9 +5,12 @@ import os
 
 if 'CELLWORLD_CACHE' in os.environ:
     cell_group_folder = os.environ['CELLWORLD_CACHE'] + "/cell_group"
+    print("CELLWORLD_CACHE environment variable set")
 else:
-    print ("CELLWORLD_CACHE environment variable not set")
+    print("CELLWORLD_CACHE environment variable not set")
     exit(0)
+print(f"cell_group_folder in cellworld_data directory {cell_group_folder}")
+project_data_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
 
 world_name = ""
 w = World.get_from_parameters_names("hexagonal",  "canonical")
@@ -26,9 +29,12 @@ def key_pressed(k):
         world_name = input("World name:")
 
         if world_name:
-            file_name = cell_group_folder + "/hexagonal." + world_name + ".occlusions"
-            print("saving file ", file_name)
+            file_name = cell_group_folder + "/hexagonal." + world_name + ".occlusions"        # cellworld_data folder
             w.cells.occluded_cells().builder().save(file_name)
+
+            file_name = project_data_directory + "/hexagonal." + world_name + ".occlusions"     # project folder
+            w.cells.occluded_cells().builder().save(file_name)
+
     elif k.key == "q":
         exit(0)
     elif k.key == "p":
