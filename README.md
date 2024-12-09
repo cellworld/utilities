@@ -7,12 +7,14 @@ git clone https://github.com/cellworld/utilities
 ### Step 2: Set CELLWORLD_CACHE
 Run the following commands to  
 (1) navigate to scripts directory and  
-(2) set CELLWORLD_CACHE and clone cellworld_data repository if the directory does not exist locally.  
+(2) set CELLWORLD_CACHE and clone cellworld_data repository if the directory does not exist locally.
+
 Note: I am assuming the cellworld_data repository exists in /mnt/c/Research. If it is located elsewhere, update the paths in the commands below accordingly.  
-Note: if you get an error like this: /bin/bash^M: bad interpreter: No such file or directory, run  **dos2unix set_cellworld_cache** command.    
+Note: if you get an error like this: /bin/bash^M: bad interpreter: No such file or directory, run:  
+**dos2unix set_cellworld_cache**    
 ```bash
 cd utilities/scripts
-./set_cellworld_cache /specified_directory
+./set_cellworld_cache /mnt/c/Research
 ```
 ### Step 3: Build Project
 ```bash
