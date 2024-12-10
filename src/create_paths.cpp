@@ -17,7 +17,7 @@ int main (int argc, char **argv){
     bool robot_paths = p.contains(Key("-r"));
 
     auto robot_occlusions = Cell_group_builder::get_from_parameters_name("hexagonal",  occlusions, robot_paths?"occlusions.robot":"occlusions");
-//    World world = World::get_from_parameters_name(configuration,"canonical"); // todo: check but added occlusions here I think this was the bug
+//    World world = World::get_from_parameters_name(configuration,"canonical");
     World world(wc, wi, robot_occlusions); // todo: check but added occlusions here I think this was the bug
     Graph graph = world.create_graph();
     Paths paths = Paths::get_astar(graph);
