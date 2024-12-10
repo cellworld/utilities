@@ -1,10 +1,12 @@
 #include <cell_world.h>
 #include <params_cpp.h>
+#include <filesystem>
 
 using namespace params_cpp;
 using namespace cell_world;
 using namespace std;
 using namespace json_cpp;
+namespace fs = std::filesystem;
 
 
 int main (int argc, char **argv){
@@ -27,5 +29,11 @@ int main (int argc, char **argv){
             spawn_locations.add(cell);
         }
     }
+
+    fs::path exec_dir = fs::canonical(argv[0]).parent_path();
+    fs::path data_dir = exec_dir / "../data/";
+    fs::path save_path = data_dir / ("hexagonal." + occlusions + ".spawn_locations");
+    pd.save(save_path.string());
+
     cout << spawn_locations << endl;
 }
