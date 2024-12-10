@@ -2,12 +2,14 @@
 #include <params_cpp.h>
 #include <iostream>
 #include <vector>
+#include <filesystem>
 
 
 using namespace params_cpp;
 using namespace cell_world;
 using namespace std;
 using namespace json_cpp;
+namespace fs = std::filesystem;
 
 vector<int> get_pattern(int start);
 bool adj_occlusions(auto &coord, Map &map1);
@@ -38,6 +40,12 @@ int main (int argc, char **argv){
             world2.cells[index].occluded = true;
         }
     }
+
+    fs::path exec_dir = fs::canonical(argv[0]).parent_path();
+    fs::path data_dir = exec_dir / "../data/";
+    fs::path save_path = data_dir / ("hexagonal." + occlusions_name + ".occlusions.robot");
+    cg2.occluded_cells().save(save_path.string());
+
     cout << cg2.occluded_cells() << endl;  // this is what is saved to CELLWORLD_CACHE
 }
 
